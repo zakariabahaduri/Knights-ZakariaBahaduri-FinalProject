@@ -34,13 +34,12 @@ String configPathFile= System.getProperty("user.dir")+"/src/test/resources/confi
 
         String baseURL = properties.getProperty("url");
        String browserType= properties.getProperty("browser");
-      //  String baseURL ="https://dev.insurance.tekschool-students.com/";
-      //  String browserType= "chrome";
+      //String  chromeOptions = Properties.getProperty("browser.option.headless");
 
         if (browserType.equalsIgnoreCase("chrome")) {
-           // ChromeOptions options = new ChromeOptions();
-          //  options.addArguments("--headless");
-            driver = new ChromeDriver();
+            ChromeOptions options = new ChromeOptions();
+            options.addArguments("--headless");
+            driver = new ChromeDriver(options);
 
         }
         else if (browserType.equalsIgnoreCase("firefox")) {

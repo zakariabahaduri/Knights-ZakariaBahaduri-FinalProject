@@ -27,7 +27,7 @@
         </dependency>
 
     </dependencies>
-    <buitld>
+    <build>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -65,7 +65,7 @@
                 </executions>
             </plugin>
         </plugins>
-    </buitld>
+    </build>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
