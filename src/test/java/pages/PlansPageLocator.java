@@ -9,6 +9,6 @@ public class PlansPageLocator {
 
     public final static By PLANS_DATE_CREATED_LOCATOR = By.xpath("//table/tbody/tr/td[4]");
 
-    public final static By PANS_DATE_EXPIRED_LOCATOR = By.xpath("//table/tbody/tr/td[5]");
+    public final static By PLANS_DATE_EXPIRED_LOCATOR = By.xpath("//table/tbody/tr/td[5]");
 
 }

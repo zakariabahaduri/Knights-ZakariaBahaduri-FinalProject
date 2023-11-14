@@ -56,7 +56,7 @@ public int getNumberOfRows(By locator) {
     return getListOfWebElements(locator).size();
 }
 
-public void getListOfWebElementStringsDateComparison (By locator) throws ParseException {
+public void dateValidation (By locator) throws ParseException {
     List <WebElement> webElementsTexts = getListOfWebElements(locator) ;
     LocalDate localDate = LocalDate.now();
     SimpleDateFormat formatter = new SimpleDateFormat("MMMM d,yyyy", Locale.ENGLISH);
@@ -73,7 +73,7 @@ Date todaysDate= Date.from(localDate.atStartOfDay(defaultZoneId).toInstant());
 
     }
 }
-    public void getTommorowsDateAsDateCreated (By locator) throws ParseException {
+    public void dateValidation (By locator , int days) throws ParseException {
         List <WebElement> webElementsTexts = getListOfWebElements(locator) ;
         LocalDate localDate = LocalDate.now().plusDays(1);
         SimpleDateFormat formatter = new SimpleDateFormat("MMMM d,yyyy", Locale.ENGLISH);

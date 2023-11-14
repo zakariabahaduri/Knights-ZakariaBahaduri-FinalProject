@@ -24,12 +24,12 @@ public class Plans extends SeleniumUtility {
     @Then("user should see today`s date as date created")
     public void user_should_see_today_s_date_as_date_created_and_tomorrow_s_date_is_date_expired() throws ParseException {
 
-        getListOfWebElementStringsDateComparison(PlansPageLocator.PLANS_DATE_CREATED_LOCATOR);
+        dateValidation(PlansPageLocator.PLANS_DATE_CREATED_LOCATOR);
 
     }
 
     @And("user should see tomorrow`s date as date expired")
     public void userShouldSeeTomorrowSDateAsDateExpired() throws ParseException {
-        getTommorowsDateAsDateCreated(PlansPageLocator.PANS_DATE_EXPIRED_LOCATOR);
+        dateValidation(PlansPageLocator.PLANS_DATE_EXPIRED_LOCATOR,1);
     }
 }
