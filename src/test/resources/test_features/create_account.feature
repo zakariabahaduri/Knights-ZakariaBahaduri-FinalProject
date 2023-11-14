@@ -1,4 +1,5 @@
 Feature:  Creating primary account
+  @US_13
   Scenario: Creating primary account with proper data
     Given user clicks on create primary account button
     And user enters email address "Bob@gmail.com"

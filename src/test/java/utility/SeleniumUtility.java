@@ -59,34 +59,34 @@ public int getNumberOfRows(By locator) {
 public void getListOfWebElementStringsDateComparison (By locator) throws ParseException {
     List <WebElement> webElementsTexts = getListOfWebElements(locator) ;
     LocalDate localDate = LocalDate.now();
-    SimpleDateFormat formater = new SimpleDateFormat("MMMM d,yyyy", Locale.ENGLISH);
+    SimpleDateFormat formatter = new SimpleDateFormat("MMMM d,yyyy", Locale.ENGLISH);
 
     ZoneId defaultZoneId = ZoneId.systemDefault();
-Date localDate1= Date.from(localDate.atStartOfDay(defaultZoneId).toInstant());
+Date todaysDate= Date.from(localDate.atStartOfDay(defaultZoneId).toInstant());
    Date actualDate;
 
 
     for (int i=0; i<webElementsTexts.size(); i++)  {
         System.out.println(webElementsTexts.get(i).getText());
-        actualDate=formater.parse(webElementsTexts.get(i).getText());
-        Assert.assertEquals(actualDate,localDate1);
+        actualDate=formatter.parse(webElementsTexts.get(i).getText());
+        Assert.assertEquals(actualDate,todaysDate);
 
     }
 }
     public void getTommorowsDateAsDateCreated (By locator) throws ParseException {
         List <WebElement> webElementsTexts = getListOfWebElements(locator) ;
         LocalDate localDate = LocalDate.now().plusDays(1);
-        SimpleDateFormat formater = new SimpleDateFormat("MMMM d,yyyy", Locale.ENGLISH);
+        SimpleDateFormat formatter = new SimpleDateFormat("MMMM d,yyyy", Locale.ENGLISH);
         ZoneId defaultZoneId = ZoneId.systemDefault();
 
-        Date localDate1= Date.from(localDate.atStartOfDay(defaultZoneId).toInstant());
+        Date tommorrowsDate= Date.from(localDate.atStartOfDay(defaultZoneId).toInstant());
         Date actualDate;
 
 
         for (int i=0; i<webElementsTexts.size(); i++)  {
             System.out.println(webElementsTexts.get(i).getText());
-            actualDate=formater.parse(webElementsTexts.get(i).getText());
-            Assert.assertEquals(actualDate,localDate1);
+            actualDate=formatter.parse(webElementsTexts.get(i).getText());
+            Assert.assertEquals(actualDate,tommorrowsDate);
 
         }
 
