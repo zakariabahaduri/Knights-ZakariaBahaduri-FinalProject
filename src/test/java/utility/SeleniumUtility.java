@@ -58,7 +58,6 @@ public int getNumberOfRows(By locator) {
 
 public void getListOfWebElementStringsDateComparison (By locator) throws ParseException {
     List <WebElement> webElementsTexts = getListOfWebElements(locator) ;
-    DateTimeFormatter dtf = DateTimeFormatter.ofPattern("MM/dd/yyyy");
     LocalDate localDate = LocalDate.now();
     SimpleDateFormat formater = new SimpleDateFormat("MMMM d,yyyy", Locale.ENGLISH);
 
